@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+PCTL=$(playerctl status)
+
+if [[ ${PCTL} == "" ]]; then
+	echo "No Music Played"
+else
+	playerctl metadata xesam:artist
+fi
+
+exit
