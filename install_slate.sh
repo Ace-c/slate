@@ -65,8 +65,8 @@ shopt -s nullglob
 DCONF_DIR=".config/dconf"
 
 if [ -d "$DCONF_DIR" ]; then
-    for file in "$DCONF_DIR"/*.dconf; do
-        ext_name="$(basename "$file" .dconf)"
+    for file in "$DCONF_DIR"/*.conf; do
+        ext_name="$(basename "$file" .conf)"
         
         echo "Restoring settings for $ext_name..."
         dconf load "/org/gnome/shell/extensions/$ext_name/" < "$file"
