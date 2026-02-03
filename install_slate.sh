@@ -195,9 +195,12 @@ X-GNOME-Autostart-enabled=true
 Comment=Start conky at startup
 EOF
 
-
 # Installing powerlevel10k theme & zsh-plugins
-echo "Installing powerlevel10k... "
+echo "wait wait wait..."
+read -p "Do you want to install zsh, powerlevel10k theme & zsh-plugins? (y/n): " zsh_choice 
+if [["$zsh_choice" =~ ^[Y/y]$ ]]; then
+echo "Installing zsh & powerlevel10k... "
+
 ## Change shell for the current user
 echo "Changing shell to zsh for $USER..."
 sudo chsh -s $(which zsh) $USER
@@ -245,4 +248,7 @@ echo "Updating .zshrc plugin list..."
 sed -i 's/plugins=(/plugins=(zsh-autosuggestions zsh-completions zsh-syntax-highlighting /' ~/.zshrc
 echo "All pluings installed!"
 
+else
+    echo "So, no zsh & powerlevel10k installation... ahh.. ok"
+    
 echo "Slate Theme Installed! Please log out or restart for changes to take effect..."
