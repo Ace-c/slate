@@ -3,14 +3,17 @@ Debian Gnome Dots
 <img width="1920" height="1080" alt="Screenshot From 2026-02-03 13-18-40" src="https://github.com/user-attachments/assets/c1f38e7f-dd4d-414e-9176-d0fb08e36a24" />
 <img width="1920" height="1080" alt="Screenshot From 2026-01-31 17-00-02" src="https://github.com/user-attachments/assets/d2d5a94a-4cc5-4d69-a965-31ea9ca1af0e" />
 ## Installation :
+> [!NOTE]
+>**Tested on Debian 13 (stable) with GNOME 48**
+
+&nbsp;
+
 ```
 git clone https://github.com/Ayu-0/slate.git && cd slate
 ```
 ```
 chmod +x ./slate.sh && ./slate.sh
 ```
-> [!NOTE]
->**Tested on Debian 13 (stable) with GNOME 48**
 
 ## Features :
 - Unified WhiteSur theme implementation across Libadwaita, GTK, Kvantum & Kde apps
