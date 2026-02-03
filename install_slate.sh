@@ -50,6 +50,7 @@ EXTENSIONS=(
   "quick-settings-tweaks@qwreey"
   "user-stylesheet@tomaszgasior.pl"
   "user-theme@gnome-shell-extensions.gcampax.github.com"
+  "vertical-workspaces@G-dH.github.com"
 )
 
 for UUID in "${EXTENSIONS[@]}"; do
