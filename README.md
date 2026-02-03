@@ -25,6 +25,14 @@ chmod +x ./install_slate.sh && ./install_slate.sh
 - Cool Powerlevel10k theme with zsh plugins
 - Easy to Install
 
+## Tweaks :
+* GTK & Libadwaita - [WhiteSur](https://github.com/vinceliuice/WhiteSur-gtk-theme)
+* Qt(kvantum) & Kde - [Whitesur](https://github.com/vinceliuice/WhiteSur-kde)
+* Icons - slate circle (modified from McMojave-circle)
+* Conky - https://www.gnome-look.org/p/1933562
+> [!TIP]
+> To make light and dark theme switch work in apps, make sure to follow system theme
+
 ## Extensions :
 * AppIndicator
 * Caffeine
@@ -37,11 +45,3 @@ chmod +x ./install_slate.sh && ./install_slate.sh
 * User-style-sheet
 * User Themes
 * V-Shell
-
-## Tweaks :
-* GTK & Libadwaita - [WhiteSur](https://github.com/vinceliuice/WhiteSur-gtk-theme)
-* Qt(kvantum) & Kde - [Whitesur](https://github.com/vinceliuice/WhiteSur-kde)
-* Icons - slate circle (modified from McMojave-circle)
-* Conky - https://www.gnome-look.org/p/1933562
-> [!TIP]
-> To make light and dark theme switch work in apps, make sure to follow system theme
