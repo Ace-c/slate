@@ -51,8 +51,6 @@ my_packages=(
     "vivaldi-stable"
     "blackbox-terminal"
     "fastfetch"
-    "rclone"
-    "rclone-browser"
     "krita"
     "inkscape"
     "okular"
