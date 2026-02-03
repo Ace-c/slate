@@ -22,7 +22,7 @@ chmod +x ./install_slate.sh && ./install_slate.sh
 - Modern Quick-settings looks
 - Clean Conky theme(slate)
 - Clean Wallpapers
-- Cool Powerlevel10k theme with zsh plugins
+- Cool Powerlevel10k theme with zsh plugins (optional)
 - Easy to Install
 
 ## Tweaks :
