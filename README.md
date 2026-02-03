@@ -1,0 +1,2 @@
+# slate
+Debian Gnome Dots
