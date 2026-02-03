@@ -1,0 +1,19 @@
+.quick-toggle, .quick-menu-toggle {
+border-radius: 0;
+}
+
+.quick-toggle:first-child, .quick-menu-toggle:first-child {
+border-radius: 2px;
+}
+
+.quick-toggle:last-child, .quick-menu-toggle:last-child {
+border-radius: 2px;
+}
+
+.icon-button {
+border-radius: 2px;
+}
+
+.quick-settings {
+border-radius: 5px;
+}
