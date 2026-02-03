@@ -25,7 +25,6 @@ chmod +x ./install_slate.sh && ./install_slate.sh
 - Clean Conky theme(slate)
 - Clean Wallpapers
 - Cool Powerlevel10k theme with zsh plugins (optional)
-- Easy to Install
 
 ## Tweaks :
 * GTK & Libadwaita - [WhiteSur](https://github.com/vinceliuice/WhiteSur-gtk-theme)
