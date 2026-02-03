@@ -44,4 +44,4 @@ chmod +x ./slate.sh && ./slate.sh
 * Icons - slate circle (modified from McMojave-circle)
 * Conky - https://www.gnome-look.org/p/1933562
 > [!TIP]
-> To toogle light & dark theme, follow system-themes in apps
+> To make light and dark theme switch work in apps, make sure to follow system theme
