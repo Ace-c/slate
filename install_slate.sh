@@ -197,7 +197,7 @@ EOF
 
 # Installing powerlevel10k theme & zsh-plugins
 echo "wait wait wait..."
-read -p "Do you want to install zsh, powerlevel10k theme & zsh-plugins? (y/n): " zsh_choice 
+read -p "Do you want to install zsh, powerlevel10k theme & zsh-plugins? (y/n): " zsh_choice
 if [[ "$zsh_choice" =~ ^[Yy]$ ]]; then
 echo "Installing zsh & powerlevel10k... "
 
