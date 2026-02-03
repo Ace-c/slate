@@ -239,7 +239,7 @@ esac
 
 ## Installing zsh-plugins
 echo "Installing zsh-plugins: Autosuggestions, Completions & Syntax-highlighting..."
-ZSH_PLUGINS_DIR="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins"
+ZSH_PLUGINS_DIR="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins" ## If you have any custom dir set for zsh in .zshrc
 
 [ ! -d "$ZSH_PLUGINS_DIR/zsh-completions" ] && git clone https://github.com/zsh-users/zsh-completions.git "$ZSH_PLUGINS_DIR/zsh-completions"
 [ ! -d "$ZSH_PLUGINS_DIR/zsh-autosuggestions" ] && git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH_PLUGINS_DIR/zsh-autosuggestions"
