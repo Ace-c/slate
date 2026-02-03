@@ -9,10 +9,10 @@
 >**Tested on Debian 13 (stable) with GNOME 48**
 
 ```
-git clone https://github.com/Ayu-0/slate.git && cd slate
+git clone https://github.com/Ace-c/slate.git && cd slate
 ```
 ```
-chmod +x ./slate.sh && ./slate.sh
+chmod +x ./install_slate.sh && ./install_slate.sh
 ```
 
 ## Features :
