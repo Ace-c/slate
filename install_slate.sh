@@ -198,7 +198,7 @@ EOF
 # Installing powerlevel10k theme & zsh-plugins
 echo "wait wait wait..."
 read -p "Do you want to install zsh, powerlevel10k theme & zsh-plugins? (y/n): " zsh_choice 
-if [["$zsh_choice" =~ ^[Y/y]$ ]]; then
+if [[ "$zsh_choice" =~ ^[Yy]$ ]]; then
 echo "Installing zsh & powerlevel10k... "
 
 ## Change shell for the current user
@@ -239,13 +239,16 @@ esac
 
 ## Installing zsh-plugins
 echo "Installing zsh-plugins: Autosuggestions, Completions & Syntax-highlighting..."
+ZSH_PLUGINS_DIR="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins"
 
-git clone https://github.com/zsh-users/zsh-completions.git ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+[ ! -d "$ZSH_PLUGINS_DIR/zsh-completions" ] && git clone https://github.com/zsh-users/zsh-completions.git "$ZSH_PLUGINS_DIR/zsh-completions"
+[ ! -d "$ZSH_PLUGINS_DIR/zsh-autosuggestions" ] && git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH_PLUGINS_DIR/zsh-autosuggestions"
+[ ! -d "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting" ] && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting"
 
 echo "Updating .zshrc plugin list..."
-sed -i 's/plugins=(/plugins=(zsh-autosuggestions zsh-completions zsh-syntax-highlighting /' ~/.zshrc
+if ! grep -q "zsh-autosuggestions" ~/.zshrc; then
+    sed -i 's/plugins=(/plugins=(zsh-autosuggestions zsh-completions zsh-syntax-highlighting /' ~/.zshrc
+fi
 echo "All pluings installed!"
 
 else
