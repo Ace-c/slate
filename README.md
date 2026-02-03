@@ -18,6 +18,7 @@ chmod +x ./slate.sh && ./slate.sh
 - Sleek & Modern Panel Design
 - Clean & Modern Quick-settings looks
 - Clean Conky theme(slate)
+- Clean Wallpapers
 - Cool Powerlevel10k theme with zsh plugins
 - Easy to Install
 
