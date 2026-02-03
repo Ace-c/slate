@@ -18,8 +18,8 @@ chmod +x ./slate.sh && ./slate.sh
 ## Features :
 - Unified WhiteSur theme implementation across Libadwaita, GTK, Kvantum & Kde apps
 - Modified McMojave-circle (slate circle) : Added new icons i.e, cursor, antigravity, etc. also folders & bold panel icons
-- Sleek & Modern Panel Design
-- Clean & Modern Quick-settings looks
+- Clean Panel Design
+- Modern Quick-settings looks
 - Clean Conky theme(slate)
 - Clean Wallpapers
 - Cool Powerlevel10k theme with zsh plugins
