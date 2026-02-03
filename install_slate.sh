@@ -46,11 +46,9 @@ EXTENSIONS=(
   "dash-to-panel@jderose9.github.com"
   "date-menu-formatter@marcinjakubowski.github.com"
   "gsconnect@andyholmes.github.io"
-  "just-perfection-desktop@just-perfection"
   "quick-settings-tweaks@qwreey"
   "user-stylesheet@tomaszgasior.pl"
   "user-theme@gnome-shell-extensions.gcampax.github.com"
-  "vertical-workspaces@G-dH.github.com"
 )
 
 for UUID in "${EXTENSIONS[@]}"; do
