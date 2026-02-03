@@ -41,8 +41,7 @@ chmod +x ./install_slate.sh && ./install_slate.sh
 * Custom command Toogle
 * Dash to Panel
 * Date Menu Formatter
-* Just Perfection
+* GSConnect
 * Quick Settings Tweaks
 * User-style-sheet
 * User Themes
-* V-Shell
