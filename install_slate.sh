@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
 # Installing prerequisites
@@ -249,11 +249,13 @@ ZSH_PLUGINS_DIR="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins" ## If you have 
 
 echo "Updating .zshrc plugin list..."
     
-    if ! grep -q "zsh-autosuggestions" ~/.zshrc; then
-        sed -i 's/plugins=(/plugins=(zsh-autosuggestions zsh-completions zsh-syntax-highlighting /' ~/.zshrc
-        echo "All plugins installed"
+    if grep -q "zsh-autosuggestions" ~/.zshrc && \
+       grep -q "zsh-completions" ~/.zshrc && \
+       grep -q "zsh-syntax-highlighting" ~/.zshrc; then
+        echo "All plugins already exits"
     else
-        echo "Plugins alredy exits"
+        sed -i 's/plugins=(/plugins=(zsh-autosuggestions zsh-completions zsh-syntax-highlighting /' ~/.zshrc
+        echo "Plugins added..."
     fi
 
 else
