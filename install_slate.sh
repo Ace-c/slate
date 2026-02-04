@@ -33,6 +33,8 @@ echo "Fonts installed successfully!"
 
 
 # Setting up extensions
+echo "Enabling main switch for extensions..."
+gsettings set org.gnome.shell disable-user-extensions false
 echo "Installing gnome-extensions..."
 ## Installing helper program "gnome-extensions-cli"(https://github.com/essembeh/gnome-extensions-cli.git)
 pip3 install --upgrade gnome-extensions-cli --break-system-packages || pip3 install --user --upgrade gnome-extensions-cli
@@ -74,10 +76,10 @@ else
 fi
 
 ## Importing user-stylesheet configuration & qt_theme switch script
-echo "Importing user-stylesheet for gnome-shell & theme toggle script..."
+echo "Importing user-stylesheet for gnome-shell & qt theme switcher script..."
 mkdir -p ~/.config/gnome-shell
 cp -rf .config/gnome-shell/* ~/.config/gnome-shell/
-cp -rf .config/scripts ~/.config/
+cp -rf .config/scripts ~/.config/  ## will overwrite if you already have 'scripts' named dir in .config
 chmod +x ~/.config/scripts/*.sh
 
 
@@ -195,12 +197,12 @@ X-GNOME-Autostart-enabled=true
 Comment=Start conky at startup
 EOF
 
+
 # Installing powerlevel10k theme & zsh-plugins
 echo "wait wait wait..."
 read -p "Do you want to install zsh, powerlevel10k theme & zsh-plugins? (y/n): " zsh_choice
 if [[ "$zsh_choice" =~ ^[Yy]$ ]]; then
-echo "Installing zsh & powerlevel10k... "
-
+echo "Installing zsh & powerlevel10k... "    
 ## Change shell for the current user
 echo "Changing shell to zsh for $USER..."
 sudo chsh -s $(which zsh) $USER
@@ -246,12 +248,16 @@ ZSH_PLUGINS_DIR="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins" ## If you have 
 [ ! -d "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting" ] && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting"
 
 echo "Updating .zshrc plugin list..."
-if ! grep -q "zsh-autosuggestions" ~/.zshrc; then
-    sed -i 's/plugins=(/plugins=(zsh-autosuggestions zsh-completions zsh-syntax-highlighting /' ~/.zshrc
-fi
-echo "All pluings installed!"
+    
+    if ! grep -q "zsh-autosuggestions" ~/.zshrc; then
+        sed -i 's/plugins=(/plugins=(zsh-autosuggestions zsh-completions zsh-syntax-highlighting /' ~/.zshrc
+        echo "All plugins installed"
+    else
+        echo "Plugins alredy exits"
+    fi
 
 else
     echo "So, no zsh & powerlevel10k installation... ahh.. ok"
-    
+fi
+
 echo "Slate Theme Installed! Please log out or restart for changes to take effect..."
