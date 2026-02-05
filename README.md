@@ -1,7 +1,7 @@
  # slate
 
 <img width="1920" height="1080" alt="Screenshot From 2026-02-04 02-56-25" src="https://github.com/user-attachments/assets/a4cb8e84-39be-4bba-86af-c6771639b63a" />
-<img width="1920" height="1080" alt="Screenshot From 2026-01-31 17-00-02" src="https://github.com/user-attachments/assets/d2d5a94a-4cc5-4d69-a965-31ea9ca1af0e" />
+<img width="1920" height="1080" alt="Screenshot From 2026-02-05 19-33-48" src="https://github.com/user-attachments/assets/b537647d-6f14-49b7-84b1-7afb9fa4ac7a" />
 <img width="1920" height="1080" alt="Screenshot From 2026-02-04 04-21-57" src="https://github.com/user-attachments/assets/8525001a-2a7d-4682-8dff-c820077cb517" />
 
 
