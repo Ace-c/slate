@@ -203,6 +203,7 @@ fi
 echo "Installing cryptomator..."
 if dpkg -s cryptomator &>/dev/null; then
     echo "Cryptomator already installed - skipping"
+else
 VER=$(curl -s https://api.github.com/repos/cryptomator/cryptomator/releases/latest | grep -oP '"tag_name": "\K[^"]+')
 wget "https://github.com/cryptomator/cryptomator/releases/download/$VER/cryptomator_${VER}-0ppa1_amd64.deb"
 sudo dpkg -i "cryptomator_${VER}-0ppa1_amd64.deb"
