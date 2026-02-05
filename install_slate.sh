@@ -42,6 +42,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 EXTENSIONS=(
   "appindicatorsupport@rgcjonas.gmail.com"
+  "arcmenu@arcmenu.com"
   "caffeine@patapon.info"
   "clipboard-history@alexsaveau.dev"
   "custom-command-toggle@storageb.github.com"
