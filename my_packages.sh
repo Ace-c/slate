@@ -104,7 +104,7 @@ Components: main
 Architectures: amd64 arm64 armhf
 Signed-By: /usr/share/keyrings/vivaldi.gpg
 EOF
-
+sudo rm /etc/apt/sources.list.d/vivaldi.list
 sudo apt update
 sudo apt install vivaldi-stable
 
@@ -146,6 +146,7 @@ echo "deb [arch=amd64,arm64 signed-by=/etc/apt/keyrings/cursor.gpg] https://down
 sudo apt update
 sudo apt install cursor -y
 echo "Cursor IDE Installed"
+fi
 
 ## Free Download Manager
 echo "Installing freedownloadmanager"
@@ -204,6 +205,7 @@ sudo dpkg -i "cryptomator_${VER}-0ppa1_amd64.deb"
 sudo apt install -f -y #fix broken
 rm -f "cryptomator_${VER}-0ppa1_amd64.deb"
 echo "Cryptomator installed"
+fi 
 
 ## Github-Desktop
 echo "Installing github-desktop..."
