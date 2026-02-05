@@ -95,6 +95,9 @@ echo "Installation complete!"
 
 # Manual installation of packages
 ## Vivaldi-Broswer
+if dpkg -s vivaldi-stable &>/dev/null;then
+    echo "Vivaldi is already installed! skipping..."
+else
 curl -fsSL https://repo.vivaldi.com/archive/linux_signing_key.pub | sudo gpg --dearmor -o /usr/share/keyrings/vivaldi.gpg
 cat <<EOF | sudo tee /etc/apt/sources.list.d/vivaldi.sources
 Types: deb
@@ -104,9 +107,10 @@ Components: main
 Architectures: amd64 arm64 armhf
 Signed-By: /usr/share/keyrings/vivaldi.gpg
 EOF
-sudo rm /etc/apt/sources.list.d/vivaldi.list
+sudo rm -f /etc/apt/sources.list.d/vivaldi.list
 sudo apt update
-sudo apt install vivaldi-stable
+sudo apt install vivaldi-stable -y
+fi
 
 ## Mega-sync
 echo "Installing mega-sync package..."
@@ -211,7 +215,7 @@ fi
 echo "Installing github-desktop..."
 wget -qO - https://mirror.mwt.me/shiftkey-desktop/gpgkey | gpg --dearmor | sudo tee /usr/share/keyrings/mwt-desktop.gpg > /dev/null
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/mwt-desktop.gpg] https://mirror.mwt.me/shiftkey-desktop/deb/ any main" > /etc/apt/sources.list.d/mwt-desktop.list'
-sudo apt update && sudo apt install github-desktop
+sudo apt update && sudo apt install github-desktop -y
 
 
 echo "Required Packages Installed!"
