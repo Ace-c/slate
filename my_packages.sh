@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Essential packages list
+sudo apt update
 essential_packages=(
     "build-essential" #meta-package that installs everything you need to compile software from source
     "git"  #kaun nahi janta issee
@@ -48,7 +48,6 @@ fi
 
 # My packages list
 my_packages=(
-    "vivaldi-stable"
     "blackbox-terminal"
     "fastfetch"
     "krita"
@@ -74,7 +73,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 echo "Installing flatpak apps..."
 flatpak_apps=(
-    "app.drey.Gapless"     
+    "com.github.neithern.g4music"     
     "org.zulip.Zulip"           
     "org.onlyoffice.desktopeditors"
     "com.notesnook.Notesnook"
@@ -95,6 +94,20 @@ echo "Installation complete!"
 
 
 # Manual installation of packages
+## Vivaldi-Broswer
+curl -fsSL https://repo.vivaldi.com/archive/linux_signing_key.pub | sudo gpg --dearmor -o /usr/share/keyrings/vivaldi.gpg
+cat <<EOF | sudo tee /etc/apt/sources.list.d/vivaldi.sources
+Types: deb
+URIs: https://repo.vivaldi.com/stable/deb/
+Suites: stable
+Components: main
+Architectures: amd64 arm64 armhf
+Signed-By: /usr/share/keyrings/vivaldi.gpg
+EOF
+
+sudo apt update
+sudo apt install vivaldi-stable
+
 ## Mega-sync
 echo "Installing mega-sync package..."
 wget https://mega.nz/linux/repo/Debian_13/amd64/megasync-Debian_13_amd64.deb && sudo apt install "$PWD/megasync-Debian_13_amd64.deb"
@@ -121,6 +134,7 @@ echo "deb [signed-by=/etc/apt/keyrings/antigravity-repo-key.gpg] https://us-cent
 sudo apt update
 sudo apt install antigravity -y
 echo "Google Antigravity Installed"
+fi 
 
 ## Cursor IDE
 echo "Installing Cursor IDE..."
