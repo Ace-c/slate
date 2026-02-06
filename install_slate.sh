@@ -48,7 +48,6 @@ EXTENSIONS=(
   "custom-command-toggle@storageb.github.com"
   "dash-to-panel@jderose9.github.com"
   "date-menu-formatter@marcinjakubowski.github.com"
-  "gsconnect@andyholmes.github.io"
   "quick-settings-tweaks@qwreey"
   "user-stylesheet@tomaszgasior.pl"
   "user-theme@gnome-shell-extensions.gcampax.github.com"
