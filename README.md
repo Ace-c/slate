@@ -22,10 +22,10 @@ chmod +x ./install_slate.sh && ./install_slate.sh
 
 ## Features :
 - Unified WhiteSur theme implementation across Libadwaita, GTK, Kvantum & Kde apps
-- Modified McMojave-circle (slate circle) : Added new icons i.e, cursor, antigravity, etc. also folders & bold panel icons
+- Custom Icon Pack: slate circle (added new icons, folders & bold panel icons)
 - Clean Panel Design
-- Modern Quick-settings looks
-- Clean Conky theme(slate)
+- Modern Quick-settings looks (if you can change is it too)
+- Clean Conky themes(added slate theme)
 - Clean Wallpapers
 - Cool Powerlevel10k theme with zsh plugins (optional)
 
