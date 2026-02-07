@@ -152,6 +152,8 @@ echo "Wallpaper set successfully!"
 echo "Installing conky ..."
 mkdir -p ~/.config/conky
 cp -r .config/conky/* ~/.config/conky/
+## Giving excutable persmission to scripts in conky
+find "$HOME/.config/conky" -type f -name "*.sh" -exec chmod +x {} \;
 
 ## Selecting conky themes
 echo "Select conky themes you want to apply : "
