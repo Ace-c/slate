@@ -69,7 +69,7 @@ echo "my package installed!"
 
 # Installing flatpak apps
 sudo apt install flatpak -y
-flatpak remote-add -y --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 echo "Installing flatpak apps..."
 flatpak_apps=(
