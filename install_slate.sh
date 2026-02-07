@@ -123,10 +123,10 @@ fi
 # flatpak fix for GTK & QT themes
 if command -v flatpak >/dev/null 2>&1; then
     echo "Flatpak detected! Applying GTK theme overrides..."
-    flatpak override --filesystem=xdg-config/gtk-3.0 && sudo flatpak override --filesystem=xdg-config/gtk-4.0
-    flatpak override --user --env=QT_STYLE_OVERRIDE=kvantum
-    flatpak override --user --filesystem=xdg-config/Kvantum:ro
-    flatpak override --user --filesystem=xdg-config/kdeglobals:ro
+    sudo flatpak override --filesystem=xdg-config/gtk-3.0 && sudo flatpak override --filesystem=xdg-config/gtk-4.0
+    sudo flatpak override --user --env=QT_STYLE_OVERRIDE=kvantum
+    sudo flatpak override --user --filesystem=xdg-config/Kvantum:ro
+    sudo flatpak override --user --filesystem=xdg-config/kdeglobals:ro
     echo "Flatpak fix applied."
 else
     echo "Flatpak not found, skipping overrides."
