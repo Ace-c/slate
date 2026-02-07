@@ -8,7 +8,7 @@ sudo apt install \
     gnome-shell-extensions gnome-shell-extension-manager dconf-cli \
     python3-pip python3-venv \
     qt5ct qt6ct qt5-style-kvantum qt6-style-kvantum \
-    conky-all zsh -y
+    conky-all playerctl zsh -y
 
 
 # Installling icons
