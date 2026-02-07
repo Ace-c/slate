@@ -1,19 +1,35 @@
+/* Custom user style-sheet, took me quite long to figure out ..shhh */
+/* This changes Night light, Dark style boxes .. idk what it's called */
 .quick-toggle, .quick-menu-toggle {
-border-radius: 0;
+    border-radius: 5px;
 }
 
-.quick-toggle:first-child, .quick-menu-toggle:first-child {
-border-radius: 2px;
+/* This changes first button of toggle box i.e Wifi, Bluetooth etc */
+.quick-toggle:first-child {
+    border-radius: 5px 0px 0px 5px;
 }
 
-.quick-toggle:last-child, .quick-menu-toggle:last-child {
-border-radius: 2px;
+/* This changes attached arrow button of toggle box */
+.quick-toggle-menu-button.icon-button {
+    border-radius: 0px 5px 5px 0px;
 }
 
+/* This change Power button box */
+.quick-toggle:last-child {
+    border-radius: 5px 5px 5px 5px;
+}
+
+/* This changes menu inside toggle box i.e, Wifi Names, Bluetooth Device list */
+.quick-toggle-menu {
+    border-radius: 7px;
+}
+
+/* Upper buttons i.e, power, lock, settings etc...*/
 .icon-button {
-border-radius: 2px;
+    border-radius: 5px;
 }
 
+/* This changes entire quick settings Border radius */
 .quick-settings {
-border-radius: 3px;
+    border-radius: 15px;
 }
