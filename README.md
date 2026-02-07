@@ -31,6 +31,9 @@ chmod +x ./install_slate.sh && ./install_slate.sh
 * Qt(kvantum) & Kde - [Whitesur](https://github.com/vinceliuice/WhiteSur-kde)
 * Icons - slate circle (modified from McMojave-circle)
 * Conky - https://www.gnome-look.org/p/1933562
+> [!NOTE]
+> To make weather script work for conky, You need to give excutable permission to ~/.config/conky/$THEMES/scripts/weather.sh
+
 > [!TIP]
 > To make light and dark theme switch work in apps, make sure to follow system theme
 
@@ -41,7 +44,6 @@ chmod +x ./install_slate.sh && ./install_slate.sh
 * Custom command Toogle
 * Dash to Panel
 * Date Menu Formatter
-* GSConnect
 * Quick Settings Tweaks
 * User-style-sheet
 * User Themes
