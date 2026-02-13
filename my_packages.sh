@@ -29,6 +29,7 @@ essential_packages=(
     "gnupg"   #used for encrypting and signing data
     "rkhunter"  #It scans your system for hidden malware, backdoors and rootkits
     "lynis"  #It scans your entire system and provides a "Hardening Index" score along with specific tips
+    "inxi"   # It used to display hardware, driver, kernel, and system-level data consise and clearly
 )
 
 for package in "${essential_packages[@]}"; do
@@ -74,10 +75,8 @@ flatpak update --appstream -y
 
 echo "Installing flatpak apps..."
 flatpak_apps=(
-    "com.github.neithern.g4music"     
-    "org.zulip.Zulip"           
+    "com.github.neithern.g4music"          
     "org.onlyoffice.desktopeditors"
-    "com.notesnook.Notesnook"
     "io.github.flattool.Warehouse"
     "org.localsend.localsend_app"
     "io.github.aandrew_me.ytdn"
