@@ -140,7 +140,6 @@ rm -f megasync-Debian_13_amd64.deb
 wget https://mega.nz/linux/repo/Debian_13/amd64/nautilus-megasync-Debian_13_amd64.deb && sudo apt install "$PWD/nautilus-megasync-Debian_13_amd64.deb"
 rm -f nautilus-megasync-Debian_13_amd64.deb
 echo "Megasync installed"
-fi
 
 
 ## Anytype
@@ -201,9 +200,11 @@ Components: main
 Architectures: amd64 arm64 armhf
 Signed-By: /usr/share/keyrings/vivaldi.gpg
 EOF
+
 sudo rm -f /etc/apt/sources.list.d/vivaldi.list
 sudo apt update
 sudo apt install vivaldi-stable -y
 fi
+
 
 echo "All Packages Installed!"
