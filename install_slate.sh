@@ -14,7 +14,7 @@ sudo apt install \
 # Installling icons
 echo "Installing icons..."
 mkdir -p ~/.icons
-cd .icons
+cd icons
 unzip -o slate-circle.zip -d ~/.icons
 unzip -o Bibata-Modern-Ice.zip -d ~/.icons
 gsettings set org.gnome.desktop.interface icon-theme 'slate-circle'
