@@ -95,16 +95,12 @@ echo "Installation complete!"
 # Manual installation of packages
 ## Cryptomator
 echo "Installing cryptomator..."
-if dpkg -s cryptomator &>/dev/null; then
-    echo "Cryptomator already installed - skipping"
-else
 VER=$(curl -s https://api.github.com/repos/cryptomator/cryptomator/releases/latest | grep -oP '"tag_name": "\K[^"]+')
 wget "https://github.com/cryptomator/cryptomator/releases/download/$VER/cryptomator_${VER}-0ppa1_amd64.deb"
 sudo dpkg -i "cryptomator_${VER}-0ppa1_amd64.deb"
 sudo apt install -f -y #fix broken
 rm -f "cryptomator_${VER}-0ppa1_amd64.deb"
-echo "Cryptomator installed"
-fi 
+echo "Cryptomator Installed!"
 
 
 ## Google Antigravity 
@@ -120,7 +116,7 @@ echo "deb [signed-by=/etc/apt/keyrings/antigravity-repo-key.gpg] https://us-cent
 
 sudo apt update
 sudo apt install antigravity -y
-echo "Google Antigravity Installed"
+echo "Antigravity Installed"
 fi 
 
 
@@ -137,15 +133,11 @@ echo "Cursor IDE Installed"
 fi
 
 
-## Mega-sync
-echo "Installing mega-sync package..."
-if dpkg -s megasync &>/dev/null; then
-    echo "mega-sync already installed -- Skipping.."
-else
+## Mega-sync(This package is for debian 13)
 wget https://mega.nz/linux/repo/Debian_13/amd64/megasync-Debian_13_amd64.deb && sudo apt install "$PWD/megasync-Debian_13_amd64.deb"
-wget https://mega.nz/linux/repo/Debian_13/amd64/nautilus-megasync-Debian_13_amd64.deb && sudo apt install "$PWD/nautilus-megasync-Debian_13_amd64.deb"
 sudo apt install -f -y
 rm -f megasync-Debian_13_amd64.deb
+wget https://mega.nz/linux/repo/Debian_13/amd64/nautilus-megasync-Debian_13_amd64.deb && sudo apt install "$PWD/nautilus-megasync-Debian_13_amd64.deb"
 rm -f nautilus-megasync-Debian_13_amd64.deb
 echo "Megasync installed"
 fi
@@ -153,16 +145,12 @@ fi
 
 ## Anytype
 echo "Installing anytype desktop"
-if dpkg -s anytype &>/dev/null; then
-    echo "Anytype is installed -- skipping"
-else
 VER=$(curl -s https://api.github.com/repos/anyproto/anytype-ts/releases/latest | grep -oP '"tag_name": "v\K[^"]+')
 wget "https://github.com/anyproto/anytype-ts/releases/download/v${VER}/anytype_${VER}_amd64.deb"
 sudo dpkg -i "anytype_${VER}_amd64.deb"
 sudo apt install -f -y
 rm -f "anytype_${VER}_amd64.deb"
 echo "Anytype installed"
-fi
 
 
 ## Free Download Manager
@@ -176,43 +164,21 @@ echo " FDM installed"
 ## Obsidian
 echo "Installing obsidian..."
 DEB_URL=$(curl -s https://api.github.com/repos/obsidianmd/obsidian-releases/releases/latest | grep "browser_download_url.*_amd64.deb" | cut -d '"' -f 4)
-
-if [ -n "$DEB_URL" ]; then
-    echo "Latest version found: $(basename "$DEB_URL")"
-    
-    echo "Downloading..."
-    wget -q --show-progress -O /tmp/obsidian.deb "$DEB_URL"
-    
-    echo "Installing..."
-    sudo apt install /tmp/obsidian.deb -y
-  
-    rm /tmp/obsidian.deb
-    sudo apt install -f -y
-    echo "Obsidian installed successfully!"
-else
-    echo "Error: Could not find the download URL"
-fi
+wget -q --show-progress -O /tmp/obsidian.deb "$DEB_URL"
+sudo apt install /tmp/obsidian.deb -y
+rm /tmp/obsidian.deb
+sudo apt install -f -y
+echo "Obsidian installed successfully!"
 
 
 ## Opencomic 
 echo "Installing opencomic reader..."
 OPENCOMIC_URL=$(curl -s https://api.github.com/repos/ollm/OpenComic/releases/latest | grep "browser_download_url.*_amd64.deb" | cut -d '"' -f 4)
-
-if [ -n "$OPENCOMIC_URL" ]; then
-    echo "Latest version found: $(basename "$OPENCOMIC_URL")"
-    
-    echo "Downloading..."
-    wget -q --show-progress -O /tmp/opencomic.deb "$OPENCOMIC_URL"
-    
-    echo "Installing..."
-    sudo apt install /tmp/opencomic.deb -y
-    
-    rm /tmp/opencomic.deb
-    sudo apt install -f -y
-    echo "OpenComic installed successfully!"
-else
-    echo "Error: Could not find the OpenComic download URL."
-fi
+wget -q --show-progress -O /tmp/opencomic.deb "$OPENCOMIC_URL"
+sudo apt install /tmp/opencomic.deb -y
+rm /tmp/opencomic.deb
+sudo apt install -f -y
+echo "OpenComic installed successfully!"
 
 
 ## Github-Desktop
@@ -240,5 +206,4 @@ sudo apt update
 sudo apt install vivaldi-stable -y
 fi
 
-
-echo "Required Packages Installed!"
+echo "All Packages Installed!"
