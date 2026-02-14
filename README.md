@@ -37,7 +37,10 @@ chmod +x ./install_slate.sh && ./install_slate.sh
 * Conky - https://www.gnome-look.org/p/1933562
 
 > [!TIP]
-> To make light and dark theme switch work in apps, make sure to follow system theme
+> Set to follow system theme in apps, In order to sync with light & dark mode toogle.
+
+> [!WARNING]
+> Title bars & window control buttons not working in wayland, but work in X11 for qt & kde apps. Temp fix is forcing apps to use xwayland, launch apps with xwayland backend i.e, QT_QPA_PLATFORM=xcb okular
 
 ## Extensions :
 * AppIndicator
