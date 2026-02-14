@@ -13,10 +13,10 @@ sudo apt install \
 
 # Installling icons
 echo "Installing icons..."
-[ -d ~/.icons ] || { echo "Creating ~/.icons..."; mkdir -p ~/.icons; }
-cd .icons
-unzip -o slate-circle.zip -d ~/.icons
-unzip -o material_light_cursors.zip -d ~/.icons
+mkdir -p ~/.local/share/icons
+cd icons
+unzip -o slate-circle.zip -d ~/.local/share/icons
+unzip -o material_light_cursors.zip -d ~/.local/share/icons
 gsettings set org.gnome.desktop.interface icon-theme 'slate-circle'
 gsettings set org.gnome.desktop.interface cursor-theme 'material_light_cursors'
 cd ..
@@ -25,7 +25,7 @@ echo "Icons installed successfully!"
 
 # Installing fonts
 echo "Installing fonts..."
-[-d ~/.local/share/fonts] || mkdir -p ~/.local/share/fonts
+mkdir -p ~/.local/share/fonts
 cp -r fonts/* ~/.local/share/fonts/
 fc-cache -fv
 gsettings set org.gnome.desktop.interface font-name 'IBM Plex Sans 10'
@@ -85,7 +85,7 @@ chmod +x ~/.config/scripts/qt_switch.sh
 
 # Setting up libadwaita & gtk-themes
 echo "Setting up gtk & libadwaita theme..."
-[ -d ~/.themes ] || mkdir -p ~/.themes
+mkdir -p ~/.local/share/themes
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
 cd WhiteSur-gtk-theme
 ./install.sh -l -N glassy --shell
