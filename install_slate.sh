@@ -13,12 +13,12 @@ sudo apt install \
 
 # Installling icons
 echo "Installing icons..."
-mkdir -p ~/.local/share/icons
-cd icons
-unzip -o slate-circle.zip -d ~/.local/share/icons
-unzip -o material_light_cursors.zip -d ~/.local/share/icons
+mkdir -p ~/.icons
+cd .icons
+unzip -o slate-circle.zip -d ~/.icons
+unzip -o Bibata-Modern-Ice.zip -d ~/.icons
 gsettings set org.gnome.desktop.interface icon-theme 'slate-circle'
-gsettings set org.gnome.desktop.interface cursor-theme 'material_light_cursors'
+gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Ice'
 cd ..
 echo "Icons installed successfully!"
 
