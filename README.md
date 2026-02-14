@@ -40,7 +40,7 @@ chmod +x ./install_slate.sh && ./install_slate.sh
 > Set to follow system theme in apps, In order to sync with light & dark mode toogle.
 
 > [!WARNING]
-> Title bars & window control buttons not working in wayland, but work in X11 for qt & kde apps. Temp fix is forcing apps to use xwayland, launch apps with xwayland backend i.e, QT_QPA_PLATFORM=xcb okular
+> Title bars not working on wayland, but work in X11 for qt & kde apps, It fallback to adwaita. Temp fix is forcing apps to use xwayland, launch apps with xwayland backend i.e, QT_QPA_PLATFORM=xcb okular. Track this [issue](https://github.com/vinceliuice/WhiteSur-gtk-theme/issues/1377)
 
 ## Extensions :
 * AppIndicator
