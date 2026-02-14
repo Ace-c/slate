@@ -85,10 +85,9 @@ chmod +x ~/.config/scripts/*.sh
 
 # Setting up libadwaita & gtk-themes
 echo "Setting up gtk & libadwaita theme..."
-[ -d ~/.themes ] || mkdir -p ~/.themes
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
 cd WhiteSur-gtk-theme
-./install.sh -l -c light -N glassy --shell
+./install.sh -l -N glassy --shell
 cd ..
 
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
