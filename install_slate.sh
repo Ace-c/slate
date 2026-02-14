@@ -85,6 +85,7 @@ chmod +x ~/.config/scripts/qt_switch.sh
 
 # Setting up libadwaita & gtk-themes
 echo "Setting up gtk & libadwaita theme..."
+[ -d ~/.themes ] || mkdir -p ~/.themes
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
 cd WhiteSur-gtk-theme
 ./install.sh -l -N glassy --shell
