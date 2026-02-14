@@ -79,8 +79,8 @@ fi
 echo "Importing user-stylesheet for gnome-shell & qt theme switcher script..."
 mkdir -p ~/.config/gnome-shell
 cp -rf .config/gnome-shell/* ~/.config/gnome-shell/
-cp -rf .config/scripts ~/.config/  ## will overwrite if you already have 'scripts' named dir in .config
-chmod +x ~/.config/scripts/*.sh
+cp -rf .config/scripts ~/.config/  ## will overwrite if you already have 'scripts' named dir in ~/.config
+chmod +x ~/.config/scripts/qt_switch.sh
 
 
 # Setting up libadwaita & gtk-themes
@@ -89,6 +89,7 @@ git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
 cd WhiteSur-gtk-theme
 ./install.sh -l -N glassy --shell
 cd ..
+rm -rf WhiteSur-gtk-theme
 
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
 gsettings set org.gnome.desktop.interface gtk-theme "WhiteSur-Light-solid"
