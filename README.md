@@ -4,7 +4,7 @@
 
 | | |
 |:---:|:---:|
-| <img src="https://github.com/user-attachments/assets/0006223f-4e61-4d44-991b-9d10ad98b6a4" width="100%"> | <img src="https://github.com/user-attachments/assets/1225fd09-7b31-4226-8200-2803fa92f919" width="100%"> |
+| <img src="https://github.com/user-attachments/assets/c2c6e14b-b5c4-4d8f-9b69-eac74dcef491" width="100%"> | <img src="https://github.com/user-attachments/assets/1225fd09-7b31-4226-8200-2803fa92f919" width="100%"> |
 | **Desktop Look** | **Quick Settings Panel** |
 | <img src="https://github.com/user-attachments/assets/12502a1e-13f6-425f-a9a2-4c45e54aebfe" width="100%"> | <img src="https://github.com/user-attachments/assets/645ad3e1-9fe1-40d4-a9c6-d3f3c05d2f4c" width="100%"> |
 | **Powerlevel10k Theme** | **Arc Menu** |
