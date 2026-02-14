@@ -55,7 +55,6 @@ my_packages=(
     "okular"
     "shotcut"
     "qbittorrent"
-    "pcmanfm-qt"
     "qalculate-gtk"
     "texstudio"
 )
