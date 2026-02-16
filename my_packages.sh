@@ -79,8 +79,9 @@ flatpak_apps=(
     "org.localsend.localsend_app"
     "io.github.aandrew_me.ytdn"
     "org.gnome.Showtime"
-    "net.nokyan.Resources"
+    "io.missioncenter.MissionCenter"
     "com.github.PintaProject.Pinta"
+    "com.github.tchx84.Flatseal"
 )
 
 for app in "${flatpak_apps[@]}"; do
