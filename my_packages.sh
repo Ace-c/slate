@@ -50,7 +50,6 @@ fi
 my_packages=(
     "blackbox-terminal"
     "fastfetch"
-    "krita"
     "inkscape"
     "okular"
     "shotcut"
