@@ -20,8 +20,8 @@ chmod +x ./install_slate.sh && ./install_slate.sh
 
 ## Features :
 - Unified WhiteSur theme implementation across Libadwaita, GTK, Kvantum & Kde apps
+- Unified GTK & QT theme toggle button in quick settings
 - Custom Icon Pack: slate circle
-- Separate button for qt theme switch(light & dark)
 - Customizable Quick-settings panel
 - Clean Conky themes
 - Beautiful wallpapers
