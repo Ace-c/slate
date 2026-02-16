@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+# These are my personal prefrences. okkkkiee...
 echo "we're sending where they belongs to...."
 PKGS=(
   gnome-software
