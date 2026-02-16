@@ -75,12 +75,15 @@ else
     echo "No settings to import!"
 fi
 
-## Importing user-stylesheet configuration & qt_theme switch script
-echo "Importing user-stylesheet for gnome-shell & qt theme switcher script..."
+## Importing gnome user-stylesheet configuration
+echo "Importing user-stylesheet for gnome-shell..."
 mkdir -p ~/.config/gnome-shell
 cp -rf .config/gnome-shell/* ~/.config/gnome-shell/
-cp -rf .config/scripts ~/.config/  ## will overwrite if you already have 'scripts' named dir in ~/.config
-chmod +x ~/.config/scripts/qt_switch.sh
+
+## GTK & QT Unified theme toogle script
+echo "Importing unified theme switcher script "
+cp -rf .config/scripts ~/.config/ 
+chmod +x ~/.config/scripts/dark_style.sh
 
 
 # Setting up libadwaita & gtk-themes
