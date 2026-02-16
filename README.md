@@ -37,7 +37,7 @@ chmod +x ./install_slate.sh && ./install_slate.sh
 * Conky - https://www.gnome-look.org/p/1933562
 
 > [!TIP]
-> Set to follow system theme in apps, In order to sync with light & dark mode toogle.
+> Set applications to follow the system theme to ensure sync with the light and dark mode toggle.
 
 > [!WARNING]
 > qt apps on wayland: Title bars & buttons are not following GTK Theme(basically It fallbacks to adwaita). Temp fix is forcing apps to use xwayland, launch apps with xwayland backend eg., QT_QPA_PLATFORM=xcb okular. Track this [issue](https://github.com/vinceliuice/WhiteSur-gtk-theme/issues/1377)
