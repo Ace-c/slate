@@ -72,7 +72,7 @@ flatpak update --appstream -y
 
 echo "Installing flatpak apps..."
 flatpak_apps=(
-    "com.github.neithern.g4music"          
+    "io.bassi.Amberol"          
     "org.onlyoffice.desktopeditors"
     "io.github.flattool.Warehouse"
     "org.localsend.localsend_app"
