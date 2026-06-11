@@ -1,9 +1,8 @@
- # slate 
+# slate 
 
-| | |
-|:---:|:---:|
-| <img src="https://github.com/user-attachments/assets/c2c6e14b-b5c4-4d8f-9b69-eac74dcef491" width="100%"> | <img src="https://github.com/user-attachments/assets/eadeec10-26a7-4639-8b9c-3b4a3aabf9df" width="100%"> |
-| <img src="https://github.com/user-attachments/assets/12502a1e-13f6-425f-a9a2-4c45e54aebfe" width="100%"> | <img src="https://github.com/user-attachments/assets/645ad3e1-9fe1-40d4-a9c6-d3f3c05d2f4c" width="100%"> |
+<img width="1920" height="1080" alt="Screenshot From 2026-06-06 19-33-49" src="https://github.com/user-attachments/assets/31788702-08f7-4306-8a12-a861e707c7e5" />
+<img width="1920" height="1080" alt="Screenshot From 2026-06-12 01-19-47" src="https://github.com/user-attachments/assets/2de3eff4-1582-45c3-b7fb-f0a1d438f41a" />
+
 
 
 &nbsp;
