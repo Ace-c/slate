@@ -50,12 +50,9 @@ fi
 my_packages=(
     "blackbox-terminal"
     "fastfetch"
-    "inkscape"
     "okular"
-    "shotcut"
     "qbittorrent"
     "qalculate-gtk"
-    "texstudio"
 )
 
 for package in "${my_packages[@]}"; do
@@ -73,13 +70,10 @@ flatpak update --appstream -y
 echo "Installing flatpak apps..."
 flatpak_apps=(
     "io.bassi.Amberol"          
-    "org.onlyoffice.desktopeditors"
     "io.github.flattool.Warehouse"
-    "org.localsend.localsend_app"
     "io.github.aandrew_me.ytdn"
     "org.gnome.Showtime"
     "io.missioncenter.MissionCenter"
-    "com.github.PintaProject.Pinta"
     "com.github.tchx84.Flatseal"
 )
 
@@ -100,23 +94,6 @@ sudo dpkg -i "cryptomator_${VER}-0ppa1_amd64.deb"
 sudo apt install -f -y #fix broken
 rm -f "cryptomator_${VER}-0ppa1_amd64.deb"
 echo "Cryptomator Installed!"
-
-
-## Google Antigravity 
-echo "Installing Google-Antigravity IDE..."
-if dpkg -s antigravity &>/dev/null; then
-  echo "Antigravity already installed — skipping"
-else
-[ -d /etc/apt/keyrings ] || sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://us-central1-apt.pkg.dev/doc/repo-signing-key.gpg | \
-  sudo gpg --dearmor --yes -o /etc/apt/keyrings/antigravity-repo-key.gpg
-echo "deb [signed-by=/etc/apt/keyrings/antigravity-repo-key.gpg] https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev/ antigravity-debian main" | \
-  sudo tee /etc/apt/sources.list.d/antigravity.list > /dev/null
-
-sudo apt update
-sudo apt install antigravity -y
-echo "Antigravity Installed"
-fi 
 
 
 ## Cursor IDE
