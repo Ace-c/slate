@@ -30,6 +30,7 @@ PKGS=(
   evolution-plugins
   malcontent
   malcontent-gui
+  loupe
   rhythmbox
   shotwell
   simple-scan
