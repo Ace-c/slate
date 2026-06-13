@@ -6,7 +6,7 @@ essential_packages=(
     "git"  #free and open-source tool for tracking changes in computer files
     "wget"  #Better for simple file downloads and recursive "web-scraping."
     "curl"  #generally more powerful for data transfer
-    "htop"  #system monitoring in real time
+    "glances" #real-time overview of your Linux system metrics in a single compact dashboard
     "dstat"   #Tool that combines the power of vmstat, iostat, and ifstat
     "ripgrep" #incredibly fast replacement for grep
     "sed"  #used to perform basic text transformations
@@ -14,6 +14,8 @@ essential_packages=(
     "fd-find"  #faster and more intuitive alternative to the traditional find command
     "fzf"  #fuzzy finder
     "neovim"  #Open source text editor, an fork of vim
+    "openssh-server" #open-source connectivity tool for remote login, using ssh
+    "rsync"  #copying and synchronizing files between folders or different servers
     "lnav"   #Log-file navigator
     "net-tools"   #collection of legacy networking utilities like ifconfig, route, and netstat
     "ufw"   #managing complex firewall rules, making it easy to block or allow specific traffic.
@@ -22,8 +24,6 @@ essential_packages=(
     "nmap"  #used for security auditing and discovering what devices and ports are active on a network.
     "tcpdump"   #packet sniffer, It lets you capture and inspect the actual data packets traveling over your network
     "traceroute"   #diagnostic tool that shows the "path" a packet takes across the internet to reach a destination, helping you find where a connection is failing
-    "openssh-server" #open-source connectivity tool for remote login, using ssh
-    "rsync"  #copying and synchronizing files between folders or different servers
     "firejail"   #sandbox program for Linux that enhances security by isolating applications in their own restricted environments
     "gnupg"   #used for encrypting and signing data
     "rkhunter"  #It scans your system for hidden malware, backdoors and rootkits
@@ -59,30 +59,6 @@ for package in "${my_packages[@]}"; do
     sudo apt install -y "$package" 
 done
 echo "my package installed!"
-
-
-
-# Installing flatpak apps
-sudo apt install flatpak -y
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak update --appstream -y
-
-echo "Installing flatpak apps..."
-flatpak_apps=(
-    "io.bassi.Amberol"          
-    "io.github.flattool.Warehouse"
-    "io.github.aandrew_me.ytdn"
-    "org.gnome.Showtime"
-    "io.missioncenter.MissionCenter"
-    "com.github.tchx84.Flatseal"
-)
-
-for app in "${flatpak_apps[@]}"; do
-    echo "Installing $app..."
-    flatpak install -y flathub "$app" || echo "Failed to install $app"
-done
-
-echo "Installation complete!"
 
 
 # Manual installation of packages
