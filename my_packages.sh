@@ -27,7 +27,7 @@ essential_packages=(
     "firejail"   #sandbox program for Linux that enhances security by isolating applications in their own restricted environments
     "gnupg"   #used for encrypting and signing data
     "rkhunter"  #It scans your system for hidden malware, backdoors and rootkits
-    "lynis"  #It scans your entire system and provides a "Hardening Index" score along with specific tips
+    "lynis"  #It scans your entire system and provides actionable recommendations to improve security defenses
     "inxi"   #It provides summary of your system hardware, drivers, kernel, and system-level data
 )
 
