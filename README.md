@@ -1,9 +1,7 @@
 # slate 
 
-<img width="1920" height="1080" alt="Screenshot From 2026-06-13 10-33-22" src="https://github.com/user-attachments/assets/aa2a8b7f-6732-4af4-92d2-c4de9ef9a793" />
-<img width="1920" height="1080" alt="Screenshot From 2026-06-12 01-19-47" src="https://github.com/user-attachments/assets/2de3eff4-1582-45c3-b7fb-f0a1d438f41a" />
-<img width="1920" height="1080" alt="Screenshot From 2026-06-15 03-05-35" src="https://github.com/user-attachments/assets/03d19abe-a6e8-4594-a6df-78aaa3e105f8" />
 
+<img width="1920" height="1080" alt="Screenshot From 2026-06-15 03-05-35" src="https://github.com/user-attachments/assets/03d19abe-a6e8-4594-a6df-78aaa3e105f8" />
 <img width="1920" height="1080" alt="Screenshot From 2026-06-15 03-06-23" src="https://github.com/user-attachments/assets/a468ed70-d8a6-4d43-b797-4c7db610956b" />
 
 
