@@ -86,7 +86,7 @@ cp -rf .config/scripts ~/.config/
 chmod +x ~/.config/scripts/dark_style.sh
 
 
-# Setting up libadwaita & gtk-themes
+# Setting up libadwaita & gtk-themes(whitesur)
 echo "Setting up gtk & libadwaita theme..."
 mkdir -p ~/.local/share/themes
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
@@ -98,7 +98,8 @@ rm -rf WhiteSur-gtk-theme
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
 gsettings set org.gnome.desktop.interface gtk-theme "WhiteSur-Light-solid"
 gsettings set org.gnome.shell.extensions.user-theme name 'WhiteSur-Light'
-
+gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
+gsettings set org.gnome.mutter center-new-windows true
 
 # Setting-up Qt themes
 echo "Installing qt themes..."
@@ -143,7 +144,7 @@ mkdir -p "$HOME/Pictures/wallpapers"
 cp -rf wallpapers/* "$HOME/Pictures/wallpapers/"
 
 WALLPAPER_PATH_LIGHT="$HOME/Pictures/wallpapers/a_close_up_of_leaves.jpg" 
-WALLPAPER_PATH_DARK="$HOME/Pictures/wallpapers/a_mountain_range_with_dark_clouds.jpg"
+WALLPAPER_PATH_DARK="$HOME/Pictures/wallpapers/City.jpg"
 WALLPAPER_URI_LIGHT="file://${WALLPAPER_PATH_LIGHT}"
 WALLPAPER_URI_DARK="file://${WALLPAPER_PATH_DARK}"
 
