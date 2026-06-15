@@ -64,16 +64,6 @@ echo "my package installed!"
 
 
 # Manual installation of packages
-## Cryptomator
-echo "Installing cryptomator..."
-VER=$(curl -s https://api.github.com/repos/cryptomator/cryptomator/releases/latest | grep -oP '"tag_name": "\K[^"]+')
-wget "https://github.com/cryptomator/cryptomator/releases/download/$VER/cryptomator_${VER}-0ppa1_amd64.deb"
-sudo dpkg -i "cryptomator_${VER}-0ppa1_amd64.deb"
-sudo apt install -f -y #fix broken
-rm -f "cryptomator_${VER}-0ppa1_amd64.deb"
-echo "Cryptomator Installed!"
-
-
 ## Cursor IDE
 echo "Installing Cursor IDE..."
 if dpkg -s cursor &>/dev/null; then
@@ -139,6 +129,16 @@ echo "Installing github-desktop..."
 wget -qO - https://mirror.mwt.me/shiftkey-desktop/gpgkey | gpg --dearmor | sudo tee /usr/share/keyrings/mwt-desktop.gpg > /dev/null
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/mwt-desktop.gpg] https://mirror.mwt.me/shiftkey-desktop/deb/ any main" > /etc/apt/sources.list.d/mwt-desktop.list'
 sudo apt update && sudo apt install github-desktop -y
+
+
+## Cryptomator
+echo "Installing cryptomator..."
+VER=$(curl -s https://api.github.com/repos/cryptomator/cryptomator/releases/latest | grep -oP '"tag_name": "\K[^"]+')
+wget "https://github.com/cryptomator/cryptomator/releases/download/$VER/cryptomator_${VER}-0ppa1_amd64.deb"
+sudo dpkg -i "cryptomator_${VER}-0ppa1_amd64.deb"
+sudo apt install -f -y #fix broken
+rm -f "cryptomator_${VER}-0ppa1_amd64.deb"
+echo "Cryptomator Installed!"
 
 
 ## Vivaldi-Broswer
