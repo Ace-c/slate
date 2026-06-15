@@ -131,16 +131,6 @@ sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/mwt-desktop.gpg]
 sudo apt update && sudo apt install github-desktop -y
 
 
-## Cryptomator
-echo "Installing cryptomator..."
-VER=$(curl -s https://api.github.com/repos/cryptomator/cryptomator/releases/latest | grep -oP '"tag_name": "\K[^"]+')
-wget "https://github.com/cryptomator/cryptomator/releases/download/$VER/cryptomator_${VER}-0ppa1_amd64.deb"
-sudo dpkg -i "cryptomator_${VER}-0ppa1_amd64.deb"
-sudo apt install -f -y #fix broken
-rm -f "cryptomator_${VER}-0ppa1_amd64.deb"
-echo "Cryptomator Installed!"
-
-
 ## Vivaldi-Broswer
 if dpkg -s vivaldi-stable &>/dev/null;then
     echo "Vivaldi is already installed! skipping..."
