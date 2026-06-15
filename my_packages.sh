@@ -3,6 +3,8 @@
 sudo apt update
 essential_packages=(
     "build-essential" #meta-package that installs everything you need to compile software from source
+    "meson" #Meson and Ninja are used together as a modern, high-speed software build automation toolset
+    "ninja-build" #run compiler commands in parallel based on the exact instructions Meson gives it
     "git"  #free and open-source tool for tracking changes in computer files
     "wget"  #Better for simple file downloads and recursive "web-scraping."
     "curl"  #generally more powerful for data transfer
