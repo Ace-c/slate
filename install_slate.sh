@@ -42,12 +42,12 @@ export PATH="$HOME/.local/bin:$PATH"
 
 EXTENSIONS=(
   "appindicatorsupport@rgcjonas.gmail.com"
+  "arcmenu@arcmenu.com"
   "caffeine@patapon.info"
   "clipboard-history@alexsaveau.dev"
   "custom-command-toggle@storageb.github.com"
   "dash-to-panel@jderose9.github.com"
   "date-menu-formatter@marcinjakubowski.github.com"
-  "hide-dock-in-overview@roslax"
   "quick-settings-tweaks@qwreey"
   "user-stylesheet@tomaszgasior.pl"
   "user-theme@gnome-shell-extensions.gcampax.github.com"
