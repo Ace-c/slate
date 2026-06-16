@@ -62,8 +62,15 @@ for package in "${my_packages[@]}"; do
 done
 echo "my package installed!"
 
+# Importing configuration for my_packages
 echo "importing blackbox-terminal configuration:)"
 if [ -f ".config/blackbox-settings.txt" ]; then dconf load /com/raggesilver/BlackBox/ < .config/blackbox-settings.txt; fi
+
+echo "importing fastfetch configuration:)"
+if [ -f ".config/fastfetch/config.jsonc" ]; then cp -r .config/fastfetch ~/.config/; fi
+
+echo "importing okular config"
+cp .config/okularrc .config/okularpartrc ~/.config/
 
 # Manual installation of packages
 ## Cursor IDE
