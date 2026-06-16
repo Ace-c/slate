@@ -62,6 +62,8 @@ for package in "${my_packages[@]}"; do
 done
 echo "my package installed!"
 
+echo "importing blackbox-terminal configuration:)"
+if [ -f ".config/blackbox-settings.txt" ]; then dconf load /com/raggesilver/BlackBox/ < .config/blackbox-settings.txt; fi
 
 # Manual installation of packages
 ## Cursor IDE
@@ -152,3 +154,14 @@ fi
 
 
 echo "All Packages Installed!"
+
+echo "Package you need to install manually:"
+echo "- zen browser"
+echo "- cryptomator"
+echo "- data grip"
+echo "- mission-center"
+echo "- namida"
+echo "- warp terminal"
+echo "- yt downloader"
+echo "- gapless"
+echo "- showtime"
