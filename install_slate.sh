@@ -134,6 +134,8 @@ if command -v flatpak >/dev/null 2>&1; then
     flatpak override --user --env=QT_STYLE_OVERRIDE=kvantum
     flatpak override --user --filesystem=xdg-config/Kvantum:ro
     flatpak override --user --filesystem=xdg-config/kdeglobals:ro
+    flatpak override --user --filesystem=~/.icons:ro
+    flatpak override --user --filesystem=xdg-data/icons:ro
     echo "Flatpak fix applied."
 else
     echo "Flatpak not found, skipping overrides."
