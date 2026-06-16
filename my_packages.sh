@@ -87,7 +87,7 @@ echo "Cursor IDE Installed"
 fi
 
 
-## Mega-sync(This package is for debian 13)
+## Mega-sync(debian 13)
 wget https://mega.nz/linux/repo/Debian_13/amd64/megasync-Debian_13_amd64.deb && sudo apt install "$PWD/megasync-Debian_13_amd64.deb"
 sudo apt install -f -y
 rm -f megasync-Debian_13_amd64.deb
