@@ -13,7 +13,6 @@ sudo apt install \
 
 # Installling icons
 echo "Installing icons..."
-sudo apt install fonts-hack -y
 mkdir -p ~/.icons
 cd icons
 unzip -o slate-circle.zip -d ~/.icons
@@ -26,6 +25,7 @@ echo "Icons installed successfully!"
 
 # Installing fonts
 echo "Installing fonts..."
+sudo apt install fonts-hack -y
 mkdir -p ~/.local/share/fonts
 cp -r fonts/* ~/.local/share/fonts/
 fc-cache -fv
