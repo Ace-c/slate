@@ -1,0 +1,22 @@
+[/]
+context-aware-header-bar=false
+cursor-blink-mode=uint32 1
+cursor-shape=uint32 1
+fill-tabs=false
+floating-controls=false
+font='Hack Bold 11'
+headerbar-drag-area=true
+opacity=uint32 69
+remember-window-size=true
+show-headerbar=false
+show-menu-button=false
+style-preference=uint32 2
+terminal-cell-height=1.1000000000000001
+terminal-cell-width=1.0
+terminal-padding=(uint32 10, uint32 10, uint32 10, uint32 10)
+theme-bold-is-bright=true
+theme-dark='Dracula'
+theme-light='Dracula Light'
+use-sixel=true
+window-height=uint32 667
+window-width=uint32 1123
