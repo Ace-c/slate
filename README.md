@@ -8,7 +8,10 @@
 &nbsp;
 ## Installation :
 > [!NOTE]
->**Tested on Debian 13 (stable) with GNOME 48**
+> Tested on Debian 13 GNOME 48
+
+> [!CAUTION]
+> **Backup is advised, since this script will override your configs**
 
 ```
 git clone https://github.com/Ace-c/slate.git && cd slate
