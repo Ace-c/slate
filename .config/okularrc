@@ -1,0 +1,39 @@
+MenuBar=Disabled
+
+[Desktop Entry]
+FullScreen=false
+
+[General]
+LockSidebar=true
+ShowSidebar=true
+
+[MainWindow]
+MenuBar=Disabled
+
+[MainWindow][Toolbar mainToolBar]
+ToolButtonStyle=TextOnly
+
+[Recent Files]
+File1[$e]=/media/ayu/Database/Book Library/Computer Science/Introduction-Wireless & Mobile Communication.pdf
+File10[$e]=$HOME/Downloads/Conky/xfactor/xfactor
+File2[$e]=/media/ayu/Database/Book Library/Data Science & AI/Data Science from Scratch First Principles with Python, Second Edition (Joel Grus).pdf
+File3[$e]=/media/ayu/Database/Book Library/Physics/mpmc_textbook_godse.pdf
+File4[$e]=/media/ayu/Database/Book Library/Physics/Micro-processors & Intefacing.pdf
+File5[$e]=/media/ayu/Database/Book Library/Self-Help/how-to-overcome-procrastination.pdf
+File6[$e]=$HOME/Downloads/Study Resources/Github Books/13.Machine-Learning-Systems.pdf
+File7[$e]=$HOME/Downloads/Study Resources/AI ML/4.alg4ai.pdf
+File8[$e]=/media/ayu/7be91bcb-ce9b-4ed7-99f7-6cfb94f175f8/home/ayu/Downloads/GATE.pdf
+File9[$e]=$HOME/Downloads/Others/date_menu_formatter_settings.dconf
+Name1[$e]=Introduction-Wireless & Mobile Communication.pdf
+Name10[$e]=xfactor
+Name2[$e]=Data Science from Scratch First Principles with Python, Second Edition (Joel Grus).pdf
+Name3[$e]=mpmc_textbook_godse.pdf
+Name4[$e]=Micro-processors & Intefacing.pdf
+Name5[$e]=how-to-overcome-procrastination.pdf
+Name6[$e]=13.Machine-Learning-Systems.pdf
+Name7[$e]=4.alg4ai.pdf
+Name8[$e]=GATE.pdf
+Name9[$e]=date_menu_formatter_settings.dconf
+
+[Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
