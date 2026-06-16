@@ -72,7 +72,8 @@ if [ -f ".config/fastfetch/config.jsonc" ]; then cp -r .config/fastfetch ~/.conf
 echo "importing okular config"
 cp .config/okularrc .config/okularpartrc ~/.config/
 
-# Manual installation of packages
+
+
 ## Cursor IDE
 echo "Installing Cursor IDE..."
 if dpkg -s cursor &>/dev/null; then
