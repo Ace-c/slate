@@ -31,6 +31,7 @@ essential_packages=(
     "rkhunter"  #It scans your system for hidden malware, backdoors and rootkits
     "lynis"  #It scans your entire system and provides actionable recommendations to improve security defenses
     "inxi"   #It provides summary of your system hardware, drivers, kernel, and system-level data
+    "strace"  #It captures system calls, signal deliveries, and process state changes, crashes, tracing performance bottlenecks, and troubleshooting permissions
 )
 
 for package in "${essential_packages[@]}"; do
@@ -48,13 +49,13 @@ if [[ ! "$proceed" =~ ^[Yy]$ ]]; then
 fi
 
 
-# My packages list
+# My packages (Repo + Manual)
 my_packages=(
     "blackbox-terminal"
     "fastfetch"
     "okular"
-    "qbittorrent"
     "qalculate-gtk"
+    "mpv"
 )
 
 for package in "${my_packages[@]}"; do
@@ -62,7 +63,7 @@ for package in "${my_packages[@]}"; do
 done
 echo "my package installed!"
 
-# Importing configuration for my_packages
+# Importing configuration for my_packages :
 echo "importing blackbox-terminal configuration:)"
 if [ -f ".config/blackbox-settings.txt" ]; then dconf load /com/raggesilver/BlackBox/ < .config/blackbox-settings.txt; fi
 
@@ -106,14 +107,6 @@ rm -f "anytype_${VER}_amd64.deb"
 echo "Anytype installed"
 
 
-## Free Download Manager
-echo "Installing freedownloadmanager"
-wget https://files2.freedownloadmanager.org/6/latest/freedownloadmanager.deb && sudo apt install "$PWD/freedownloadmanager.deb"
-sudo apt install -f -y
-rm -f freedownloadmanager.deb
-echo " FDM installed"
-
-
 ## Obsidian
 echo "Installing obsidian..."
 DEB_URL=$(curl -s https://api.github.com/repos/obsidianmd/obsidian-releases/releases/latest | grep "browser_download_url.*_amd64.deb" | cut -d '"' -f 4)
@@ -122,6 +115,14 @@ sudo apt install /tmp/obsidian.deb -y
 rm /tmp/obsidian.deb
 sudo apt install -f -y
 echo "Obsidian installed successfully!"
+
+
+## Free Download Manager
+echo "Installing freedownloadmanager"
+wget https://files2.freedownloadmanager.org/6/latest/freedownloadmanager.deb && sudo apt install "$PWD/freedownloadmanager.deb"
+sudo apt install -f -y
+rm -f freedownloadmanager.deb
+echo " FDM installed"
 
 
 ## Opencomic 
@@ -160,16 +161,11 @@ sudo apt update
 sudo apt install vivaldi-stable -y
 fi
 
-
 echo "All Packages Installed!"
 
-echo "Package you need to install manually:"
+
+echo "Flatpak Packages : Install it manually ... pls"
 echo "- zen browser"
-echo "- cryptomator"
-echo "- data grip"
 echo "- mission-center"
-echo "- namida"
-echo "- warp terminal"
-echo "- yt downloader"
 echo "- gapless"
 echo "- showtime"
