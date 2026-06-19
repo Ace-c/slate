@@ -167,8 +167,8 @@ find "$HOME/.config/conky" -type f -name "*.sh" -exec chmod +x {} \;
 ## Selecting conky themes
 echo "Select conky themes you want to apply : "
 echo "1. Nashira-Dark"
-echo "2. Celaeno"
-echo "3. Slate"
+echo "2. Slate"
+echo "3. SlateII"
 
 read -p "Enter your choice (1, 2, 3): " choice
 
@@ -178,12 +178,12 @@ case $choice in
     SELECTED_CONFIG="$HOME/.config/conky/Nashira-Dark/Nashira-Dark.conf"
     ;;
 2)
-    echo "Celaeno theme is selected, Applying... "
-    SELECTED_CONFIG="$HOME/.config/conky/Celaeno/Celaeno.conf"
-    ;;
-3)
     echo "Slate theme is selected, Applying... "
     SELECTED_CONFIG="$HOME/.config/conky/Slate/Slate.conf"
+    ;;
+3)
+    echo "SlateII theme is selected, Applying... "
+    SELECTED_CONFIG="$HOME/.config/conky/SlateII/SlateII.conf"
     ;;
 *)
     echo "Invalid choice. Defaulting to Slate."
