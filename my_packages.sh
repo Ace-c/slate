@@ -142,6 +142,34 @@ sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/mwt-desktop.gpg]
 sudo apt update && sudo apt install github-desktop -y
 
 
+## Cryptomator
+echo "Installing cryptomator..."
+if dpkg -s cryptomator &>/dev/null || [ -f "$HOME/.local/bin/cryptomator.AppImage" ]; then
+    echo "Cryptomator already installed - skipping"
+else
+  
+    VER=$(curl -s https://api.github.com/repos/cryptomator/cryptomator/releases/latest | grep -oP '"tag_name": "\K[^"]+')
+    mkdir -p "$HOME/.local/bin"
+    wget -O "$HOME/.local/bin/cryptomator.AppImage" "https://github.com/cryptomator/cryptomator/releases/download/$VER/cryptomator-${VER}-x86_64.AppImage"
+    chmod +x "$HOME/.local/bin/cryptomator.AppImage"
+    mkdir -p "$HOME/.local/share/applications"
+    cat <<EOF > "$HOME/.local/share/applications/cryptomator.desktop"
+[Desktop Entry]
+Type=Application
+Name=Cryptomator
+Comment=Free client-side encryption for your cloud files
+Exec=$HOME/.local/bin/cryptomator.AppImage
+Icon=cryptomator
+Terminal=false
+Categories=Utility;Security;Settings;
+StartupNotify=true
+EOF
+
+    # update app.desktop database
+    update-desktop-database "$HOME/.local/share/applications/"
+fi
+
+
 ## Vivaldi-Broswer
 if dpkg -s vivaldi-stable &>/dev/null;then
     echo "Vivaldi is already installed! skipping..."
