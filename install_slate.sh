@@ -90,7 +90,7 @@ chmod +x ~/.config/scripts/dark_style.sh
 # Setting up libadwaita & gtk-themes(whitesur)
 echo "Setting up gtk & libadwaita theme..."
 mkdir -p ~/.local/share/themes
-git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
+git clone https://github.com/Ayu-0/WhiteSur-gtk-theme.git --depth=1
 cd WhiteSur-gtk-theme
 ./install.sh -l -N glassy --shell
 cd ..
