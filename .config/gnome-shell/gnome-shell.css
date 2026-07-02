@@ -1,35 +1,88 @@
-/* Custom user style-sheet, took me quite long to figure out ..shhh */
-/* This changes Night light, Dark style boxes .. idk what it's called */
-.quick-toggle, .quick-menu-toggle {
-    border-radius: 5px;
-}
+/* Custom user style-sheet for gnome-shell */
 
-/* This changes first button of toggle box i.e Wifi, Bluetooth etc */
-.quick-toggle:first-child {
-    border-radius: 5px 0px 0px 5px;
-}
-
-/* This changes attached arrow button of toggle box */
-.quick-toggle-menu-button.icon-button {
-    border-radius: 0px 5px 5px 0px;
-}
-
-/* This change Power button box */
-.quick-toggle:last-child {
-    border-radius: 5px 5px 5px 5px;
-}
-
-/* This changes menu inside toggle box i.e, Wifi Names, Bluetooth Device list */
-.quick-toggle-menu {
-    border-radius: 7px;
+/*----------------------------------------------------------------------QUICK SETTINGS---------------------------------------------------------------------*/
+/* This changes entire quick settings Border radius */
+.quick-settings {
+    border-radius: 3px;
 }
 
 /* Upper buttons i.e, power, lock, settings etc...*/
 .icon-button {
+    border-radius: 3px;
+}
+
+/* This changes Power button  box */
+.quick-toggle:last-child {
+    border-radius: 3px 3px 3px 3px;
+}
+
+/* This changes first button of toggle box i.e Wifi, Bluetooth etc */
+.quick-toggle:first-child {
+    border-radius: 3px 0px 0px 3px;
+}
+
+/* This changes attached arrow button of toggle box */
+.quick-toggle-menu-button.icon-button {
+    border-radius: 0px 3px 3px 0px;
+}
+
+/* This changes menu inside toggle box i.e, Wifi Names, Bluetooth Device list */
+.quick-toggle-menu {
     border-radius: 5px;
 }
 
-/* This changes entire quick settings Border radius */
-.quick-settings {
-    border-radius: 7px;
+/* This changes Night light, Dark style boxes */
+.quick-toggle, .quick-menu-toggle {
+    border-radius: 3px;
+}
+
+
+/*--------------------------------------------------------------------------CALENDAR------------------------------------------------------------------------*/
+/* This changes calendar radius*/
+.calendar {
+    border-radius: 5px;
+}
+
+/* This will change below calendar area for events etc...*/	
+.events-button,
+.world-clocks-button,
+.weather-button {
+	border-radius: 5px;
+}
+
+
+/*-------------------------------------------------------------------------NOTIFICATION--------------------------------------------------------------------*/
+	
+.message-list .message, 
+.popup-menu-content .message, 
+.message-view .message { /* 48+ */
+	border-radius: 5px;
+}
+
+
+/*---------------------------------------------------------------------------MEDIA------------------------------------------------------------------------- */
+/* album art */
+.media-message-cover-icon {
+	border-radius: 3px;
+}
+
+.media-message .message-icon { /* 46+ */
+	border-radius: 3px !important;
+}
+
+/* when there is no artwork */
+.media-message-cover-icon.fallback,
+.media-message .message-icon.message-themed-icon { /* 46+ */
+	border-radius: 3px;
+}
+
+
+/*----------------------------------------------------------------------------POP MENU----------------------------------------------------------------------*/
+/* This will change popups, when you click calendar or any application or extension right or left click.  yeah... that thing */
+.popup-menu {
+      border-radius:5px;
+}
+
+.popup-menu .popup-menu-content {
+      border-radius: 5px;
 }
