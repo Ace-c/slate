@@ -1,6 +1,6 @@
 # slate 
 
-
+<img width="1920" height="1080" alt="Screenshot From 2026-07-03 03-01-34" src="https://github.com/user-attachments/assets/e6a10d6b-1185-493d-869e-589f00259902" />
 <img width="1920" height="1080" alt="Screenshot From 2026-06-16 05-13-58" src="https://github.com/user-attachments/assets/5f612c5c-a7da-49bb-bf4a-0003702da9bf" />
 <img width="1920" height="1080" alt="Screenshot From 2026-06-15 03-06-23" src="https://github.com/user-attachments/assets/a468ed70-d8a6-4d43-b797-4c7db610956b" />
 
