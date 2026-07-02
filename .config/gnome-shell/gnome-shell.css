@@ -52,10 +52,15 @@
 
 
 /*-------------------------------------------------------------------------NOTIFICATION--------------------------------------------------------------------*/
-	
+/* Notification message box panel */	
 .message-list .message, 
 .popup-menu-content .message, 
 .message-view .message { /* 48+ */
+	border-radius: 5px;
+}
+
+/* popup messages(notification popup) */
+.message {
 	border-radius: 5px;
 }
 
