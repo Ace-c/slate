@@ -90,11 +90,11 @@
 /*---------POP MENU----------*/
 /* This will change popups, when you right/left click on calendar, quick-settings or any application/extension  yeah... that thing */
 .popup-menu {
-      border-radius:5px;
+      border-radius:4px;
 }
 
 .popup-menu .popup-menu-content {
-      border-radius: 5px;
+      border-radius: 4px;
 }
 
 
