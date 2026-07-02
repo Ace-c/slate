@@ -1,6 +1,7 @@
 /* Custom user style-sheet for gnome-shell, you can add other property too */
 
-/*----------------------------------------------------------------------QUICK SETTINGS---------------------------------------------------------------------*/
+
+/*------QUICK SETTINGS-----*/
 /* This changes quick settings popup Border radius, will not work if popup is already defined...tested */
 .quick-settings {
     border-radius: 3px;
@@ -37,7 +38,8 @@
 }
 
 
-/*--------------------------------------------------------------------------CALENDAR------------------------------------------------------------------------*/
+
+/*-------CALENDAR--------*/
 /* This changes calendar radius*/
 .calendar {
     border-radius: 5px;
@@ -51,7 +53,8 @@
 }
 
 
-/*-------------------------------------------------------------------------NOTIFICATION--------------------------------------------------------------------*/
+
+/*-------NOTIFICATION-------*/
 /* Notification message box panel */	
 .message-list .message, 
 .popup-menu-content .message, 
@@ -65,7 +68,8 @@
 }
 
 
-/*---------------------------------------------------------------------------MEDIA------------------------------------------------------------------------- */
+
+/*------MEDIA------------ */
 /* album art */
 .media-message-cover-icon {
 	border-radius: 3px;
@@ -82,8 +86,9 @@
 }
 
 
-/*----------------------------------------------------------------------------POP MENU----------------------------------------------------------------------*/
-/* This will change popups, when you click calendar, quick-settings or any application or extension right or left click.  yeah... that thing */
+
+/*---------POP MENU----------*/
+/* This will change popups, when you right/left click on calendar, quick-settings or any application/extension  yeah... that thing */
 .popup-menu {
       border-radius:5px;
 }
@@ -93,7 +98,8 @@
 }
 
 
-/*---------------------------------------------------------------------------OSD----------------------------------------------------------------------------*/
+
+/*---------OSD-----------*/
 /* This will change...ahh...when you switch workspace or adjust vol there is popup at bottom of screen.. yeah that*/
 .switcher-list, /* alt + tab */
 .resize-popup, /* no idea :( */
