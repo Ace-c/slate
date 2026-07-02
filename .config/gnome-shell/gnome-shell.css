@@ -91,3 +91,13 @@
 .popup-menu .popup-menu-content {
       border-radius: 5px;
 }
+
+
+/*---------------------------------------------------------------------------OSD----------------------------------------------------------------------------*/
+/* This will change...ahh...when you switch workspace or adjust vol there is popup at bottom of screen.. yeah that*/
+.switcher-list, /* alt + tab */
+.resize-popup, /* no idea :( */
+.workspace-switcher,
+.osd-window /* volume/brightness/.. switcher */ {
+	border-radius: 5px;
+}
