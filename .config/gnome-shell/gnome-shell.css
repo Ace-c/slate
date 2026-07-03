@@ -107,3 +107,8 @@
 .osd-window /* volume/brightness/.. switcher */ {
 	border-radius: 5px;
 }
+
+/* running apps in switcher list */
+.switcher-list .item-box {
+	border-radius: 7px;
+}
