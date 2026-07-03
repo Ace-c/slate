@@ -112,3 +112,11 @@
 .switcher-list .item-box {
 	border-radius: 7px;
 }
+
+
+
+/*--------OVERVIEW----------*/
+/* overview background */
+.workspace-animation { /* spacing between worspaces (ctrl+alt+arr_left/right / 3 fingers gesture) */
+	background-color: rgba(27, 32, 38, 1);
+}
