@@ -69,7 +69,7 @@
 
 
 
-/*------MEDIA------------ */
+/*---------MEDIA---------- */
 /* album art */
 .media-message-cover-icon {
 	border-radius: 3px;
@@ -89,14 +89,15 @@
 
 /*---------POP MENU----------*/
 /* This will change popups, when you right/left click on calendar, quick-settings or any application/extension  yeah... that thing */
-.popup-menu {
-      border-radius:5px;
+.popup-menu-content {
+    border-radius: 5px;
 }
 
-.popup-menu .popup-menu-content {
-      border-radius: 5px;
+.popup-menu-item, /* menu items */
+.app-menu { /* right-click (and panel) app menu */
+	border-radius: 5px;
 }
-
+	
 
 
 /*---------OSD-----------*/
@@ -115,8 +116,18 @@
 
 
 
+/*-------PANEL TWEAKS-------*/
+/* panel buttons */
+.panel-button,
+.panel-button .clock { /* DND / new messages icon */
+	border-radius: 3px;
+	border: 0px solid rgba(0, 0, 0, 0) !important;
+}
+
+
+
 /*--------OVERVIEW----------*/
-/* overview background */
+/* overview background, I don't want white bakground even in light theme */
 .workspace-animation { /* spacing between worspaces (ctrl+alt+arr_left/right / 3 fingers gesture) */
 	background-color: rgba(27, 32, 38, 1);
 }
