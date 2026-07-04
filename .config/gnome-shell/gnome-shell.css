@@ -123,11 +123,3 @@
 	border-radius: 3px;
 	border: 0px solid rgba(0, 0, 0, 0) !important;
 }
-
-
-
-/*--------OVERVIEW----------*/
-/* overview background, I don't want white bakground even in light theme */
-.workspace-animation { /* spacing between worspaces (ctrl+alt+arr_left/right / 3 fingers gesture) */
-	background-color: rgba(27, 32, 38, 1);
-}
