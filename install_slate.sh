@@ -19,7 +19,7 @@ cp -r fonts/* ~/.local/share/fonts/
 fc-cache -fv
 gsettings set org.gnome.desktop.interface font-name 'IBM Plex Sans 10'
 gsettings set org.gnome.desktop.interface document-font-name 'Cantarell 11'
-gsettings set org.gnome.desktop.interface monospace-font-name 'Exo 2 Medium 11'
+gsettings set org.gnome.desktop.interface monospace-font-name 'IBM Plex Sans 10'
 gsettings set org.gnome.desktop.wm.preferences titlebar-font 'IBM Plex Sans 11'
 echo "Fonts installed successfully!"
 
@@ -49,7 +49,7 @@ EXTENSIONS=(
   "appindicatorsupport@rgcjonas.gmail.com"
   "arcmenu@arcmenu.com"
   "caffeine@patapon.info"
-  "clipboard-history@alexsaveau.dev"
+  "copyous@boerdereinar.dev"
   "custom-command-toggle@storageb.github.com"
   "dash-to-panel@jderose9.github.com"
   "date-menu-formatter@marcinjakubowski.github.com"
