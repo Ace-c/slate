@@ -11,17 +11,6 @@ sudo apt install \
     conky-all playerctl zsh -y
 
 
-# Installling icons
-echo "Installing icons..."
-mkdir -p ~/.icons
-cd icons
-unzip -o slate-circle.zip -d ~/.icons
-unzip -o Bibata-Modern-Ice.zip -d ~/.icons
-gsettings set org.gnome.desktop.interface icon-theme 'slate-circle'
-gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Ice'
-cd ..
-echo "Icons installed successfully!"
-
 
 # Installing fonts
 echo "Installing fonts..."
@@ -31,6 +20,19 @@ cp -r fonts/* ~/.local/share/fonts/
 fc-cache -fv
 gsettings set org.gnome.desktop.interface font-name 'IBM Plex Sans 10'
 echo "Fonts installed successfully!"
+
+
+# Installling icons
+echo "Installing icons..."
+mkdir -p ~/.local/share/icons
+cd icons
+unzip -o slate-circle.zip -d ~/.local/share/icons
+unzip -o slate.zip -d ~/.local/share/icons
+unzip -o Bibata-Modern-Ice.zip -d ~/.local/share/icons
+gsettings set org.gnome.desktop.interface icon-theme 'slate'
+gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Ice'
+cd ..
+echo "Icons installed successfully!"
 
 
 # Setting up extensions
