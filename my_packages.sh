@@ -75,16 +75,6 @@ cp .config/okularrc .config/okularpartrc ~/.config/
 
 
 
-
-## Mega-sync(debian 13)
-wget https://mega.nz/linux/repo/Debian_13/amd64/megasync-Debian_13_amd64.deb && sudo apt install "$PWD/megasync-Debian_13_amd64.deb"
-sudo apt install -f -y
-rm -f megasync-Debian_13_amd64.deb
-wget https://mega.nz/linux/repo/Debian_13/amd64/nautilus-megasync-Debian_13_amd64.deb && sudo apt install "$PWD/nautilus-megasync-Debian_13_amd64.deb"
-rm -f nautilus-megasync-Debian_13_amd64.deb
-echo "Megasync installed"
-
-
 ## Anytype
 echo "Installing anytype desktop"
 VER=$(curl -s https://api.github.com/repos/anyproto/anytype-ts/releases/latest | grep -oP '"tag_name": "v\K[^"]+')
@@ -103,31 +93,6 @@ sudo apt install /tmp/obsidian.deb -y
 rm /tmp/obsidian.deb
 sudo apt install -f -y
 echo "Obsidian installed successfully!"
-
-
-## Free Download Manager
-echo "Installing freedownloadmanager"
-wget https://files2.freedownloadmanager.org/6/latest/freedownloadmanager.deb && sudo apt install "$PWD/freedownloadmanager.deb"
-sudo apt install -f -y
-rm -f freedownloadmanager.deb
-echo " FDM installed"
-
-
-## Opencomic 
-echo "Installing opencomic reader..."
-OPENCOMIC_URL=$(curl -s https://api.github.com/repos/ollm/OpenComic/releases/latest | grep "browser_download_url.*_amd64.deb" | cut -d '"' -f 4)
-wget -q --show-progress -O /tmp/opencomic.deb "$OPENCOMIC_URL"
-sudo apt install /tmp/opencomic.deb -y
-rm /tmp/opencomic.deb
-sudo apt install -f -y
-echo "OpenComic installed successfully!"
-
-
-## Github-Desktop
-echo "Installing github-desktop..."
-wget -qO - https://mirror.mwt.me/shiftkey-desktop/gpgkey | gpg --dearmor | sudo tee /usr/share/keyrings/mwt-desktop.gpg > /dev/null
-sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/mwt-desktop.gpg] https://mirror.mwt.me/shiftkey-desktop/deb/ any main" > /etc/apt/sources.list.d/mwt-desktop.list'
-sudo apt update && sudo apt install github-desktop -y
 
 
 ## Cryptomator
@@ -179,9 +144,3 @@ fi
 
 echo "All Packages Installed!"
 
-
-echo "Flatpak Packages : Install it manually ... pls"
-echo "- zen browser"
-echo "- mission-center"
-echo "- gapless"
-echo "- showtime"
