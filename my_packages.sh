@@ -75,18 +75,6 @@ cp .config/okularrc .config/okularpartrc ~/.config/
 
 
 
-## Cursor IDE
-echo "Installing Cursor IDE..."
-if dpkg -s cursor &>/dev/null; then
-  echo "Cursor already installed — skipping"
-else
-curl -fsSL https://downloads.cursor.com/keys/anysphere.asc | gpg --dearmor | sudo tee /etc/apt/keyrings/cursor.gpg > /dev/null
-echo "deb [arch=amd64,arm64 signed-by=/etc/apt/keyrings/cursor.gpg] https://downloads.cursor.com/aptrepo stable main" | sudo tee /etc/apt/sources.list.d/cursor.list > /dev/null
-sudo apt update
-sudo apt install cursor -y
-echo "Cursor IDE Installed"
-fi
-
 
 ## Mega-sync(debian 13)
 wget https://mega.nz/linux/repo/Debian_13/amd64/megasync-Debian_13_amd64.deb && sudo apt install "$PWD/megasync-Debian_13_amd64.deb"
