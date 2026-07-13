@@ -19,7 +19,7 @@ cp -r fonts/* ~/.local/share/fonts/
 fc-cache -fv
 gsettings set org.gnome.desktop.interface font-name 'IBM Plex Sans 10'
 gsettings set org.gnome.desktop.interface document-font-name 'Cantarell 11'
-gsettings set org.gnome.desktop.interface monospace-font-name 'IBM Plex Sans 10'
+gsettings set org.gnome.desktop.interface monospace-font-name 'ComicShannsMono Nerd Font 11'
 gsettings set org.gnome.desktop.wm.preferences titlebar-font 'IBM Plex Sans 11'
 echo "Fonts installed successfully!"
 
