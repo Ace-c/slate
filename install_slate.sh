@@ -102,7 +102,7 @@ rm -rf WhiteSur-gtk-theme
 
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
 gsettings set org.gnome.desktop.interface gtk-theme "WhiteSur-Light-solid"
-gsettings set org.gnome.shell.extensions.user-theme name 'WhiteSur-Light'
+gsettings set org.gnome.shell.extensions.user-theme name 'Marble-blue-light'
 gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
 gsettings set org.gnome.mutter center-new-windows true
 
