@@ -91,7 +91,7 @@ cp -rf .config/scripts ~/.config/
 chmod +x ~/.config/scripts/dark_style.sh
 
 
-# Setting up libadwaita & gtk-themes(whitesur)
+# Setting up libadwaita & gtk
 echo "Setting up gtk & libadwaita theme..."
 mkdir -p ~/.local/share/themes
 git clone https://github.com/Ayu-0/WhiteSur-gtk-theme.git --depth=1
@@ -106,7 +106,7 @@ gsettings set org.gnome.shell.extensions.user-theme name 'WhiteSur-Light'
 gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
 gsettings set org.gnome.mutter center-new-windows true
 
-# Setting-up Qt themes
+# Setting-up Qt & kde themes
 echo "Installing qt themes..."
 
 mkdir -p ~/.config/Kvantum ~/.config/qt5ct ~/.config/qt6ct
@@ -120,9 +120,8 @@ cp -f .config/kdeglobals ~/.config/
 
 echo "Setting system-wide Qt environment variables..."
 
-## setting env-vars for qt
 if ! grep -q "QT_QPA_PLATFORMTHEME" /etc/environment; then
-
+    echo 'QT_QPA_PLATFORM=xcb' | sudo tee -a /etc/environment  # launch kde apps with xwayland backend
     echo 'QT_QPA_PLATFORMTHEME=qt5ct' | sudo tee -a /etc/environment
     echo 'QT_STYLE_OVERRIDE=kvantum' | sudo tee -a /etc/environment
     echo "Env vars added to /etc/environment."
