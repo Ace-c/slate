@@ -1,13 +1,20 @@
+[Core Performance]
+TextHinting=Enabled
+
+[Dlg Accessibility]
+RecolorBackground=212,213,217
+RecolorForeground=84,84,84
+
 [Document]
 ChangeColors=true
 PaperColor=246,245,244
-RenderMode=Paper
+RenderMode=Recolor
 
 [General]
 ttsEngine=
 
 [PageView]
-BackgroundColor=255,255,255
+BackgroundColor=198,200,204
 UseCustomBackgroundColor=true
 
 [Reviews]
