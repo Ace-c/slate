@@ -54,6 +54,7 @@ my_packages=(
     "blackbox-terminal"
     "fastfetch"
     "okular"
+    "okular-extra-backends"
     "qalculate-gtk"
     "mpv"
 )
