@@ -9,6 +9,7 @@ PKGS=(
   gnome-software-plugin-flatpak
   gnome-software-plugin-snap
   gnome-disk-utility
+  baobab
   gnome-characters
   gnome-tour
   gnome-contacts
