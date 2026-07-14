@@ -38,6 +38,8 @@ PKGS=(
   eog-plugins
   yelp
   seahorse
+  gnome-connections
+  gnome-remote-desktop
   libreoffice*
   firefox-esr
 )
