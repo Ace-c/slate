@@ -17,13 +17,11 @@ PKGS=(
   gnome-music
   gnome-clocks
   gnome-calculator
-  gnome-text-editor 
   gnome-sound-recorder
   gnome-snapshot
   gnome-logs
   gnome-system-monitor
   im-config
-  evince
   epiphany-browser
   evolution
   evolution-common
