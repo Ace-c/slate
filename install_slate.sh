@@ -96,7 +96,7 @@ echo "Setting up gtk & libadwaita theme..."
 mkdir -p ~/.local/share/themes
 git clone https://github.com/Ayu-0/WhiteSur-gtk-theme.git --depth=1
 cd WhiteSur-gtk-theme
-./install.sh -l -N glassy --shell
+./install.sh -l -c light -c dark -N glassy --name slate -HD
 cd ..
 rm -rf WhiteSur-gtk-theme
 
