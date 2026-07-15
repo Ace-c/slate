@@ -1,37 +1,33 @@
 #!/bin/bash
 
-KDE_CONF="$HOME/.config/kdeglobals"
 KV_CONF="$HOME/.config/Kvantum/kvantum.kvconfig"
 
-# colorscheme files in ~/.local/share/color-schemes/)
-DARK_COLOR="WhiteSurDark"
-LIGHT_COLOR="WhiteSur"  
 
-DARK_KVANTUM="WhiteSurDark"
-LIGHT_KVANTUM="WhiteSur"
+DARK_KVANTUM="kvantum"
+LIGHT_KVANTUM="AustralAzure"
 
 apply_dark() {
     echo "Applying GTK Dark Theme..."
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-    gsettings set org.gnome.desktop.interface gtk-theme "WhiteSur-Dark-solid"
-    gsettings set org.gnome.shell.extensions.user-theme name 'WhiteSur-Dark'
+    gsettings set org.gnome.desktop.interface gtk-theme "slate-Dark-solid"
+    gsettings set org.gnome.shell.extensions.user-theme name 'Marble-blue-dark'
 
-    echo "Applying qt Dark scheme..."
-    sed -i "s/^ColorScheme=.*/ColorScheme=$DARK_COLOR/" "$KDE_CONF"
-    sed -i "s/^Name=.*/Name=$DARK_COLOR/" "$KDE_CONF"
+    echo "Applying qt Dark Theme..."
     sed -i "s/^theme=.*/theme=$DARK_KVANTUM/" "$KV_CONF"
+    
+    gsettings set org.gnome.desktop.background picture-uri-dark "$HOME/Pictures/wallpapers/Everblush_Mike_erskine.jpg"
 }
 
 apply_light() {
     echo "Applying GTK Light Theme..."
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
-    gsettings set org.gnome.desktop.interface gtk-theme "WhiteSur-Light-solid"
-    gsettings set org.gnome.shell.extensions.user-theme name 'WhiteSur-Light'
+    gsettings set org.gnome.desktop.interface gtk-theme "slate-Light-solid"
+    gsettings set org.gnome.shell.extensions.user-theme name 'Marble-blue-light'
 
-    echo "Applying qt Light Scheme..."
-    sed -i "s/^ColorScheme=.*/ColorScheme=$LIGHT_COLOR/" "$KDE_CONF"
-    sed -i "s/^Name=.*/Name=$LIGHT_COLOR/" "$KDE_CONF"
+    echo "Applying qt Light Theme..."
     sed -i "s/^theme=.*/theme=$LIGHT_KVANTUM/" "$KV_CONF"
+    
+    gsettings set org.gnome.desktop.background picture-uri "$HOME/Pictures/wallpapers/a_close_up_of_leaves.jpg"
 }
 
 
@@ -48,4 +44,4 @@ case "$1" in
         ;;
 esac
 
-echo "GTK will follow toogle quickly, but qt & kde apps requires restart."
+echo "GTK will follow toogle quickly, but qt-based apps requires restart."
