@@ -101,7 +101,7 @@ cd ..
 rm -rf WhiteSur-gtk-theme
 
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
-gsettings set org.gnome.desktop.interface gtk-theme "WhiteSur-Light-solid"
+gsettings set org.gnome.desktop.interface gtk-theme "slate-Light-solid"
 gsettings set org.gnome.shell.extensions.user-theme name 'Marble-blue-light'
 gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
 gsettings set org.gnome.mutter center-new-windows true
@@ -135,8 +135,9 @@ if command -v flatpak >/dev/null 2>&1; then
     flatpak override --user --filesystem=xdg-config/gtk-3.0
     flatpak override --user --filesystem=xdg-config/gtk-4.0
     flatpak override --user --env=QT_STYLE_OVERRIDE=kvantum
+    flatpak override --user --env=QT_QPA_PLATFORMTHEME=qt5ct --filesystem=xdg-config/qt5ct:ro
+    flatpak override --user --env=QT_QPA_PLATFORMTHEME=qt6ct --filesystem=xdg-config/qt6ct:ro
     flatpak override --user --filesystem=xdg-config/Kvantum:ro
-    flatpak override --user --filesystem=xdg-config/kdeglobals:ro
     flatpak override --user --filesystem=~/.icons:ro
     flatpak override --user --filesystem=xdg-data/icons:ro
     echo "Flatpak fix applied."
@@ -151,7 +152,7 @@ mkdir -p "$HOME/Pictures/wallpapers"
 cp -rf wallpapers/* "$HOME/Pictures/wallpapers/"
 
 WALLPAPER_PATH_LIGHT="$HOME/Pictures/wallpapers/a_close_up_of_leaves.jpg" 
-WALLPAPER_PATH_DARK="$HOME/Pictures/wallpapers/City.jpg"
+WALLPAPER_PATH_DARK="$HOME/Pictures/wallpapers/Everblush_Mike_erskine.jpg"
 WALLPAPER_URI_LIGHT="file://${WALLPAPER_PATH_LIGHT}"
 WALLPAPER_URI_DARK="file://${WALLPAPER_PATH_DARK}"
 
