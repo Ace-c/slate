@@ -26,11 +26,11 @@ echo "Fonts installed successfully!"
 
 # Installling icons
 echo "Installing icons..."
-mkdir -p ~/.local/share/icons
+mkdir -p ~/.icons # not using xdg path cuz of issue with kde & qt apps
 cd icons
-unzip -o slate-circle.zip -d ~/.local/share/icons
-unzip -o slate.zip -d ~/.local/share/icons
-unzip -o Bibata-Modern-Ice.zip -d ~/.local/share/icons
+unzip -o slate-circle.zip -d ~/.icons
+unzip -o slate.zip -d ~/.icons
+unzip -o Bibata-Modern-Ice.zip -d ~/.icons
 gsettings set org.gnome.desktop.interface icon-theme 'slate'
 gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Ice'
 cd ..
@@ -94,6 +94,8 @@ chmod +x ~/.config/scripts/dark_style.sh
 # Setting up libadwaita & gtk
 echo "Setting up gtk & libadwaita theme..."
 mkdir -p ~/.local/share/themes
+cp -r themes/* ~/.local/share/themes/
+
 git clone https://github.com/Ayu-0/WhiteSur-gtk-theme.git --depth=1
 cd WhiteSur-gtk-theme
 ./install.sh -l -c light -c dark -N glassy --name slate -HD
@@ -108,26 +110,15 @@ gsettings set org.gnome.mutter center-new-windows true
 
 # Setting-up Qt & kde themes
 echo "Installing qt themes..."
-
 mkdir -p ~/.config/Kvantum ~/.config/qt5ct ~/.config/qt6ct
-mkdir -p ~/.local/share/color-schemes
 
 cp -rf .config/Kvantum/* ~/.config/Kvantum/
 cp -rf .config/qt5ct/* ~/.config/qt5ct/
 cp -rf .config/qt6ct/* ~/.config/qt6ct/
-cp -rf .config/color-schemes/* ~/.local/share/color-schemes/
-cp -f .config/kdeglobals ~/.config/
 
 echo "Setting system-wide Qt environment variables..."
-
-if ! grep -q "QT_QPA_PLATFORMTHEME" /etc/environment; then
-    echo 'QT_QPA_PLATFORM=xcb' | sudo tee -a /etc/environment  # launch kde apps with xwayland backend
-    echo 'QT_QPA_PLATFORMTHEME=qt5ct' | sudo tee -a /etc/environment
-    echo 'QT_STYLE_OVERRIDE=kvantum' | sudo tee -a /etc/environment
-    echo "Env vars added to /etc/environment."
-else
-    echo "Env vars already exist."
-fi
+mkdir -p ~/.config/environment.d
+cp -r .config/environment.d/* ~/.config/environment.d/
 
 # flatpak fix for GTK & QT themes
 if command -v flatpak >/dev/null 2>&1; then
