@@ -46,7 +46,7 @@ chmod +x ./install_slate.sh && ./install_slate.sh
 ## Extensions :
 * AppIndicator
 * Caffeine
-* Clipboard History
+* Copyous
 * Custom command Toogle
 * Dash to Panel
 * Date Menu Formatter
